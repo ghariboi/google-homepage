@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation */
+
+#nav {
+
+    display: grid;
+    grid-template-columns: 50px 50px 1fr repeat(2, 50px) 75px;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "about store . gmail images sign-in" ;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.about {
+    grid-area: about;
+    justify-self: center;
+    align-self: center;
+}
+
+.store {
+    grid-area: store;
+    justify-self: center;
+    align-self: center;
+}
+
+.gmail {
+    grid-area: gmail;
+    justify-self: center;
+    align-self: center;
+}
+
+.images {
+    grid-area: images;
+    justify-self: center;
+    align-self: center;
+}
+
+.sign-in {
+    grid-area: sign-in;
+    border: none;
+    background-color: rgb(2, 81, 250);
+    height: 30px;
+    color: white;
+    
+}
+.sign-in:hover {
+    border: 1px solid #000000;
+}
+
+/* Logo and Searchbar */
+
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 300px 40px 100px 50px;
+    grid-template-areas: 
+    ". logo ."
+    ". searchdiv ."
+    ". buttons ."
+    ". p ." ;
+}
+
+.logo {
+    grid-area: logo;
+    justify-self: center;
+    align-self: end;
+}
+
+.searchdiv{
+    grid-area: searchdiv;
+    display: grid;
+    grid-template-columns: 25px 1fr 25px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "glass searchbar microphone";
+}
+
+.searchbar {
+   grid-area: searchbar;
+   border-radius: 20px;
+   
+}
+.searchbar:hover {
+    box-shadow: 1px 1px 5px grey;
+}
+.searchbar:active .searchbar:focus{
+    box-shadow: 1px 1px 5px grey;
+}
+
+/* Images */
+.microphone {
+    grid-area: microphone;
+    height: 20px;
+    justify-self: center;
+    align-self: center;
+    padding-right: 75px;
+}
+
+.magnifying-glass{
+    grid-area: glass;
+    height: 20px;
+    justify-self: center;
+    align-self: center;
+    padding-left: 75px;
+}
+
+/* Search Buttons */
+.button {
+    grid-area: buttons;
+    justify-self: center;
+    align-self: center;
+    
+}
+
+.button1 {
+    background-color: #f2f2f2;
+    margin: 11px 4px;
+    padding: 0px 16px;
+    font-size: 15px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 4px;
+    color: #5F6368;
+    height: 36px;
+}
+
+.button1:hover {
+    box-shadow: 1px 1px rgba(0,0,0,0.1);
+    border: 1px solid #c6c6c6;
+}
+
+.button2 {
+    background-color: #f2f2f2;
+    margin: 11px 4px;
+    padding: 0px 16px;
+    font-size: 15px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 4px;
+    color: #5F6368;
+    height: 36px;
+}
+
+.button2:hover {
+    box-shadow: 1px 1px rgba(0,0,0,0.1);
+    border: 1px solid #c6c6c6;
+
+}
+
+p {
+    grid-area: p;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: blue;
+    align-self: center;
+    justify-self: center;
+}
+
+/* Footer */
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(2, 100px)  150px 1fr repeat(3, 100px);
+    grid-template-rows: 50px;
+    grid-template-areas: 
+    "advertising business search . privacy terms settings";
+}  
+.footer {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: #f2f2f2;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right: 0;
+}
+
+.Advertising {
+    grid-area: advertising;
+    align-self: center;
+    justify-self: center;
+}
+
+.Business {
+    grid-area: business;
+    align-self: center;
+    justify-self: center;
+}
+
+.HowSearchWorks {
+    grid-area: search;
+    align-self: center;
+    justify-self: center;
+}   
+
+.Privacy {
+    grid-area: privacy;
+    align-self: center;
+    justify-self: center;
+}
+
+.Terms {
+    grid-area: terms;
+    align-self: center;
+    justify-self: center;
+}  
+
+.Settings {
+    grid-area: settings;
+    align-self: center;
+    justify-self: center;
+}
